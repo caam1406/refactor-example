@@ -1,5 +1,8 @@
 import { render } from 'react-dom'
-
 import { App } from './App'
-
-render(<App />, document.getElementById('root'))
+import { ShareStateContext } from './contexts/shareState'
+render(
+    <ShareStateContext>
+        <App />
+    </ShareStateContext>
+, document.getElementById('root'))
